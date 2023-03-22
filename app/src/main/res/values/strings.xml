@@ -2,12 +2,19 @@
     <string name="app_name">Mesa Mobile App Challenge</string>
     <string name="password">1234</string>
 
+    <string name = "appTitle">Catharsis</string>
+    <string name = "passwordPrompt">Enter your password</string>
+
     <string name ="titleHint">Note Title</string>
     <string name = "dateHint">Date</string>
     <string name = "noteHint">Share your thoughts</string>
 
-    <string name = "appTitle">Catharsis</string>
-    <string name = "passwordPrompt">Enter your password</string>
+    <string name = "firstTimePasswordTitle">Enter a password</string>
+    <string name = "firstTimePasswordHint">Password</string>
+    <string name = "confirmPasswordHint">Confirm password</string>
+
+
+
 
     <string name="title_activity_settings">SettingsActivity</string>
 

@@ -2,12 +2,13 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blackPrimary">
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
@@ -22,7 +23,7 @@
                 android:id="@+id/noteTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="50dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="40dp"
                 android:hint="@string/titleHint"
@@ -31,7 +32,9 @@
                 android:inputType="text"
                 android:textAlignment="textStart"
                 android:textColor="@color/whitePrimary"
+                android:textColorHighlight="@color/redPrimary"
                 android:textColorHint="@color/hintColor"
+                android:textColorLink="@color/redSecondary"
                 android:textSize="34sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -39,28 +42,31 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"></EditText>
 
-            <EditText
-                android:id="@+id/textDate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
+            <TextView
+                android:id="@+id/noteDate"
+                android:layout_width="317dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="50dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="40dp"
                 android:hint="@string/dateHint"
                 android:importantForAutofill="no"
                 android:includeFontPadding="false"
                 android:inputType="datetime"
+                android:padding="5dp"
                 android:textAlignment="viewStart"
                 android:textColor="#7E7D7D"
+                android:textColorHighlight="@color/redPrimary"
                 android:textColorHint="@color/hintColor"
-                android:textSize="14sp"
+                android:textColorLink="@color/redSecondary"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/noteTitle"></EditText>
+                app:layout_constraintTop_toBottomOf="@+id/noteTitle"></TextView>
 
             <EditText
-                android:id="@+id/textNote"
+                android:id="@+id/noteField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
@@ -70,33 +76,48 @@
                 android:hint="@string/noteHint"
                 android:importantForAutofill="no"
                 android:inputType="textMultiLine"
-                android:minHeight="100sp"
+                android:minHeight="300sp"
                 android:textColor="@color/whitePrimary"
+                android:textColorHighlight="@color/redPrimary"
                 android:textColorHint="@color/hintColor"
+                android:textColorLink="@color/redSecondary"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textDate"></EditText>
+                app:layout_constraintTop_toBottomOf="@+id/noteDate"></EditText>
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/deleteButton"
-                android:layout_width="100dp"
+                android:layout_width="115dp"
                 android:layout_height="57dp"
                 android:layout_marginTop="36dp"
-                android:background="@color/blackSecondary"
-                android:padding="10dp"
-                app:tint="@color/redPrimary"
+                android:background="@color/redSecondary"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textNote"
-                app:srcCompat="@drawable/kindpng_2455104__1_">
-            </ImageView>
+                app:layout_constraintTop_toBottomOf="@+id/noteField"
+                app:srcCompat="@drawable/kindpng_2455104__1_"
+                app:tint="@color/white"></ImageButton>
 
             <View
+                android:id="@+id/styleView"
                 android:layout_width="10dp"
-                android:layout_height="3dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="35dp"
+                android:background="@color/redPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/noteTitle"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.107"
+                />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
